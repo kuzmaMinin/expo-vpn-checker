@@ -1,39 +1,25 @@
-import { useEvent } from 'expo';
-import ExpoVpnChecker, { ExpoVpnCheckerView } from 'expo-vpn-checker';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import ExpoVpnChecker from "expo-vpn-checker";
+import { useState } from "react";
+import { Button, SafeAreaView, Text, View } from "react-native";
 
 export default function App() {
-  const onChangePayload = useEvent(ExpoVpnChecker, 'onChange');
+  const [isVpnEnabled, setIsVpnEnabled] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.container}>
-        <Text style={styles.header}>Module API Example</Text>
-        <Group name="Constants">
-          <Text>{ExpoVpnChecker.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{ExpoVpnChecker.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await ExpoVpnChecker.setValueAsync('Hello from JS!');
-            }}
-          />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
-        <Group name="Views">
-          <ExpoVpnCheckerView
-            url="https://www.example.com"
-            onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
-            style={styles.view}
-          />
-        </Group>
-      </ScrollView>
+      <Text style={styles.header}>Module API</Text>
+      <Group name="Is VPN enabled on device">
+        <Text>{isVpnEnabled.toString()}</Text>
+      </Group>
+
+      <Button
+        title="Check VPN"
+        onPress={async () => {
+          const result = ExpoVpnChecker.checkVpn();
+
+          setIsVpnEnabled(result);
+        }}
+      />
     </SafeAreaView>
   );
 }
@@ -58,16 +44,12 @@ const styles = {
   },
   group: {
     margin: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 10,
     padding: 20,
   },
   container: {
     flex: 1,
-    backgroundColor: '#eee',
-  },
-  view: {
-    flex: 1,
-    height: 200,
+    backgroundColor: "#eee",
   },
 };
