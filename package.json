@@ -1,0 +1,43 @@
+{
+  "name": "expo-vpn-checker",
+  "version": "0.1.0",
+  "description": "Check if VPN is enabled",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-vpn-checker",
+    "ExpoVpnChecker"
+  ],
+  "repository": "https://github.com/kuzmaMinin/expo-vpn-checker",
+  "bugs": {
+    "url": "https://github.com/kuzmaMinin/expo-vpn-checker/issues"
+  },
+  "author": "Oleg Kuzmin <kuzma89klg@gmail.com> (https://github.com/kuzmaMinin)",
+  "license": "MIT",
+  "homepage": "https://github.com/kuzmaMinin/expo-vpn-checker#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "~18.3.12",
+    "expo-module-scripts": "^4.0.2",
+    "expo": "~52.0.0",
+    "react-native": "0.76.0"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

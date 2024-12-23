@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-vpn-checker": ["../src/index"],
+      "expo-vpn-checker/*": ["../src/*"]
+    }
+  }
+}
