@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "expo.modules.vpnchecker.example"
+      "bundleIdentifier": "expo.modules.vpnchecker.example",
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true
+      }
     },
     "android": {
       "adaptiveIcon": {
