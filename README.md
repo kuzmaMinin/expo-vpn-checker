@@ -1,25 +1,44 @@
 # Expo VPN Checker
 ## This is expo module for checking if device has an active VPN connection.
 
-The API is very simple. There is only one checkVpn() method, which returns true or false, depending on the state of the device.
+The API is very simple. There is only one *checkVpn()* method, which returns **true** or **false**, depending on the state of the device.
 
 ### Setup
 
-`npx expo install expo-vpn-checker`
+:white_check_mark: In **app.json** in the root of your project update **ios** section:
 
-To use native module you need to make a development build
+```
+"ios": {
+  ...
+  "entitlements": {
+    "com.apple.developer.networking.wifi-info": true
+  }
+}
+```
+:white_check_mark: Then run:
+```
+npx expo install expo-vpn-checker
+```
 
-`npx expo preduild`
+:white_check_mark: To use native module you need to make a development build
+```npx expo preduild```
 
-for IOS
-`npx expo run:ios`
+DONE!
 
-for Android
-`npx expo run:android`
+for *IOS*:
+```
+npx expo run:ios
+```
+
+for *Android*:
+```
+npx expo run:android
+```
 
 ### Usage
 
-```javascript import ExpoVpnChecker from "expo-vpn-checker";
+```javascript
+import ExpoVpnChecker from "expo-vpn-checker";
 import {} from "react-native"
 
 export default function App() {
@@ -36,4 +55,5 @@ export default function App() {
       ...
     </>
   );
-} </pre>
+}
+```
