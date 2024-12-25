@@ -37,6 +37,11 @@ for *Android*:
 npx expo run:android
 ```
 
+auto import is not supported, use:
+```
+import ExpoVpnChecker from "expo-vpn-checker";
+```
+
 ### Usage
 
 ```javascript
