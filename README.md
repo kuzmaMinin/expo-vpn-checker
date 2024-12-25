@@ -41,7 +41,7 @@ npx expo run:android
 
 ```javascript
 import ExpoVpnChecker from "expo-vpn-checker";
-import {} from "react-native"
+import {Text} from "react-native"
 
 export default function App() {
   const [isVpnEnabled, setIsVpnEnabled] = useState(false);
