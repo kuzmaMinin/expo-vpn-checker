@@ -1,6 +1,6 @@
 {
   "name": "expo-vpn-checker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Check if VPN is enabled",
   "main": "build/index.js",
   "types": "build/index.d.ts",

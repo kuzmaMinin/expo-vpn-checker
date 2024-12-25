@@ -22,7 +22,7 @@ npx expo install expo-vpn-checker
 
 :white_check_mark: To use native module you need to make a development build
 ```
-npx expo preduild
+npx expo prebuild
 ```
 
 DONE!
