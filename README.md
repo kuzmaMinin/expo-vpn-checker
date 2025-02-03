@@ -1,6 +1,9 @@
 # Expo VPN Checker
 ## This is expo module for checking if device has an active VPN connection.
 
+> [!IMPORTANT]
+> Expo modules still don't work in Windows enviroment. See [FYI](https://github.com/expo/fyi/blob/main/wsl.md).
+
 The API is very simple. There is only one *checkVpn()* method, which returns **true** or **false**, depending on the state of the device.
 
 ### Setup
